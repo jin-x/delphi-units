@@ -1,4 +1,4 @@
-{ DelphiVerDef7x.inc v1.00 (c) 2016 by Jin X (jin.x@sources.ru), https://github.com/jin-x/delphi-units }
+{ DelphiVerDef7x.inc v1.00 (c) 2016 by Jin X (jin.x@sources.ru), http://xk7.ru/p/d/u }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // *** THIS INCLUDE IS DESIGNED FOR DELPHI COMPILERS VERSION 6 AND ABOVE !!! \\\ It outputs "__YOU_NEED_AT_LEAST_DELPHI_6_OR_ABOVE_TO_COMPILE_THIS__" error line to code for earler compiler versions! //
