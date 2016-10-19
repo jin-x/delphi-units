@@ -1,4 +1,4 @@
-{ DelphiVerDef7x.inc v1.00 (c) 2016 by Jin X (jin.x@sources.ru)  }
+{ DelphiVerDef7x.inc v1.00 (c) 2016 by Jin X (jin.x@sources.ru), https://github.com/jin-x/delphi-units }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // *** THIS INCLUDE IS DESIGNED FOR DELPHI COMPILERS VERSION 6 AND ABOVE !!! \\\ It outputs "__YOU_NEED_AT_LEAST_DELPHI_6_OR_ABOVE_TO_COMPILE_THIS__" error line to code for earler compiler versions! //
@@ -64,7 +64,7 @@
 {$DEFINE DelphiVerDef7x}     // Indicates usage of this include.
 {$DEFINE DelphiVerDef7x100}  // Compatibility version or this include (1.00).
 // You can add version check after including this file:
-// {$IFNDEF DelphiVerDef7x100}{$MESSAGE FATAL 'DelphiVerDef7x.inc file is not included or has incompatible version !!!'}{$ENDIF}
+// {$IFNDEF DelphiVerDef7x100}{$MESSAGE FATAL 'DelphiVerDef7x.inc file is not included or incompatible version !!!'}{$ENDIF}
 
 //////////////////////////////////
 // Version and features defines //

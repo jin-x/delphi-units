@@ -16,7 +16,7 @@ program DelphiVersionExample;
 {$DEFINE NeedAssembler}          // This code requires Assembler support.
 {$DEFINE RecommendAnsi}          // It's recommended to use ANSI Strings defaults (not Unicode).
 {$I DelphiVerDef7x.inc}
-{$IFNDEF DelphiVerDef7x100}{$MESSAGE FATAL 'DelphiVerDef7x.inc file is not included or has incompatible version !!!'}{$ENDIF}
+{$IFNDEF DelphiVerDef7x100}{$MESSAGE FATAL 'DelphiVerDef7x.inc file is not included or incompatible version !!!'}{$ENDIF}
 
 //{$DEFINE ManualInput}  // Uncomment this if you want to use only manual input.
 {$DEFINE DoSort}  // Comment this if you don't want to sort strings.
