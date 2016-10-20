@@ -1,4 +1,4 @@
-program DelphiVersionExample;
+program DelphiVerExample;
 {$APPTYPE CONSOLE}
 // This is an example of "DelphiVerDef7x.inc" include using.
 // It may contain superfluous define declarations but it's made for various possibilities illustration.
