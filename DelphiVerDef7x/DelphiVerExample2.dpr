@@ -1,6 +1,6 @@
 program DelphiVerExample2;
 {$APPTYPE CONSOLE}
-// This is a simple example of "DelphiVerDef7x.inc" include using.
+// This is a second example of "DelphiVerDef7x.inc" include using.
 
 {$DEFINE NeedDelphi7}  // You need at least Delphi 7 compiler version,
 {$DEFINE NeedWindows}  // This code can be compiled only for Windows.
