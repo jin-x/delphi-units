@@ -36,7 +36,7 @@ begin
   begin
     Ok := TryStrToFloat(S, N);
     if Ok then Break;
-    DecimalSeparator := Ch
+    {$IFDEF DelphiXE}FormatSettings.{$ENDIF}DecimalSeparator := Ch
   end;
   if Ok then
 {$ELSE}
@@ -54,7 +54,7 @@ begin
     begin
       Ok := TryStrToDateTime(S, D);
       if Ok then Break;
-      DateSeparator := Ch
+      {$IFDEF DelphiXE}FormatSettings.{$ENDIF}DateSeparator := Ch
     end;
     if Ok then
 {$ELSE}
