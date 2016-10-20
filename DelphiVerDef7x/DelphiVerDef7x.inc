@@ -27,7 +27,7 @@
 // * DelphiXE4: Volatile, Weak, Ref, NoOldStrings (for iOS only), ARCModel, ZeroBasedStrings, ExtCompat (and ExtendedCompatibility);
 // * DelphiXE3: RecHelpers, AtomicIntrin;
 // * DelphiXE2: UnitScopeNames, CrossPlatformRTL, PackedByteAlign, Extended8 (for Win64 only);
-// * DelphiXE: Align16, CodeAlign, StrongLinkTypes, RegExp, IngoreStringChecks;
+// * DelphiXE/DelphiXE1: Align16, CodeAlign, StrongLinkTypes, RegExp, IngoreStringChecks;
 // * Delphi2010: EnhancedRTTI, Attributes, Delayed, ClassConstr, ExtraInterfaceOps;
 // * Delphi2009: DefaultIntrin, Generics, SmartPointers, AnonymMethods, NestedExcepts, PointerMath, ExitParam, TMonitor, DeprecatedText;
 // * Delphi2007: [no symbols];
