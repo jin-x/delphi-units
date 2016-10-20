@@ -40,7 +40,7 @@
 // So you can use these symbols with $IFNDEF even if this file may be not included and you prefer to use some feature (e.g. {$IFNDEF NoInline}inline;{$ENDIF} instead of {$IFDEF Inline}inline;{$ENDIF}).
 // p.s. "NoOldStrings" symbol is inverted to "OldStrings". Be careful to use {$IFDEF OldStrings} if this include file may be absent because this define will be absent too.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// You may define one or more symbols "NeedDelphiXXX", "OnlyDelphiXXX" or "NotAboveDelphiXXX", "NotForDelphiXXX", "TestWarnings", "TesedDelphiXXX" and "DesignedForDelphiXXX" BEFORE including this file:
+// You may define one or more symbols "NeedDelphiXXX", "OnlyDelphiXXX", "NotAboveDelphiXXX", "NotForDelphiXXX", "TestWarnings", "TesedDelphiXXX" and "DesignedForDelphiXXX" BEFORE including this file:
 // * "NeedDelphiXXX" is used to prevent compilation by earler Delphi version (compiler will show fatal message); you shouldn't use "NeedDelphi6" because this include works only with Delphi 6 and above.
 // * "OnlyDelphiXXX" is used to indicate that code can be compiled ONLY by Delphi version you need (compiler will show fatal message for other compiler versions);
 // * "NotAboveDelphiXXX" is used to prevent compilation by later Delphi version (compiler will show fatal message);
