@@ -17,7 +17,7 @@ type
   // Массив процедур без параметров
   TProcedureArray = array of TProcedure;
 
-  // Класс замера скорости с одним счётчиком
+  // Класс замера скорости (с одним счётчиком)
   TMeasure = class
     protected
       FCounter: Int64;
