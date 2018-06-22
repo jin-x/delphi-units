@@ -1,0 +1,47 @@
+Measure7x: модуль для измерения скорости процедур/методов и отдельных участков кода.
+(c) 2018 by Jin X (jin.x@sources.ru), http://xk7.ru/p/d/u
+
+v1.10 (22.06.2018):
+[!] Модуль полностью переработан! Теперь он будет функционировать, даже если функции WinAPI QueryPerformanceCounter
+    и QueryPerformanceFrequency не поддерживаются системой (это возможно в Windows 2000, ME и более ранних версиях).
+    Модуль не содержит перегруженных функций и методов, т.к. это порождает неоднозначные вызовы некоторых из них в
+    ранних версиях Delphi. Каждая функция и метод теперь имеет отдельное имя с соответствующими суффиксами.
+[+] Добавлены методы и функции для работы с объектными методами (procedure of object: TObjectProc, TObjectProcInt)
+    и анонимными методами (reference to procedure: TReferenceProc, TReferenceProcInt). Их имена оканчиваются на
+    ObjProc, ObjProcInt и RefProc, RefProcInt (Int - для вызова процедуры с параметром типа Integer).
+[*] Имена методов MeasureProc и MeasureCall заменены на более короткие Proc и ProcInt соответственно, а также
+    добавлены методы ObjProc, ObjProcInt RefProc, RefProcInt.
+[*] Функции MeasureFastestCall и MeasureSlowestCall переименованы в MeasureFastestProcCalls и MeasureSlowestProcCalls
+    соответственно (а также добавлены функции с окончаниями ...ObjProcCalls и ...RefProcCalls). Я не использовал
+    имена вроде MeasureFastestProcInt, т.к. у таких окончаний другой смысл: разовый вызов с указанным параметром,
+    а не множественный (с перебором значений параметра), как у описанных выше функций.
+[+] Добавлены процедуры MeasureProcs (MeasureObjProcs, MeasureRefProcs) и MeasureProcCalls (MeasureObjProcCalls,
+    MeasureRefProcCalls), позволяющие измерять скорость без сравнения (в отличие от MeasureFastestProc[Calls],
+    MeasureSlowestProc[Calls] и их производных). Не путайте MeasureProcs и MeasureProc !!!
+[*] Функции, принимающие в качестве параметра переменную-счётчик (var Counter: Int64), переименованы с добавлением
+    суффикса X, что означает eXternal counter, т.е. внешний счётчик (например, StartMeasureX, StopMeasureX).
+[+] Добавлены метод TMeasure.Continue и функции ContinueMeasure/ContinueMeasureX, позволяющие продолжить отсчёт
+    времени, прерванный методом TMeasure.Stop или функциями StopMeasure/StopMeasureX.
+[-] Удалён тип TProcedureArray, функции MeasureFastestProc и MeasureSlowestProc с 2, 3, 4 и 5-ю параметрами типа
+    TProcedure, вместо них теперь можно использовать функции с теми же именами, но с открытыми массивами процедур
+    и методов (array of TProcedure, array of TObjectProc, array of TReferenceProc) в качестве параметра. Например,
+    так: MeasureFastestProc([A, B, C]).
+[+] Добавлены функции MeasureAndCompareProc (...ObjProc, ...RefProc), позволяющие сравнить скорость работы двух
+    процедур или методов с учётом погрешности. Также добавлена функция CompareMeasures.
+[*] Свойство TMeasure.Counter переименовано в Last.
+[+] Добавлена функция MeasureCounter и статический метод класса TMeasure.Counter, позволяющие получить текущее
+    значение системного счётчика.
+[+] Добавлены статические методы класса TMeasure: ToSec, ToMillisec, ToMicrosec, позволяющие переводить результаты
+    измерений в секунды, миллисекунды и микросекунды (аналогично использованию MeasureToSec, MeasureToMillisec,
+    MeasureToMicrosec).
+[+] Добавлена процедура ResetMeasures, удаляющая массив счётчиков (освобождающая память).
+[+] Добавлены функции FastestMeasure, SlowestMeasure для определения самого быстрого и медленного измерения.
+[*] Вызов QueryPerformanceFrequency удалён из секции инициализации и выполняется только при первом обращении к
+    функциям MeasureFrequency и ...Sec, ...Millisec, ...Microsec и аналогичным методам класса TMeasure. Так что,
+    теперь, если модуль подключен, но не используется, ваша программа не будет содержать никакого лишнего кода :)
+[+] Добавлена константа Measure7xVersion = 1.10, которую можно использовать в директивах компиляции {$IFDEF} и {$IF}.
+[+] Сделана демонстрационная программа.
+[*] Небольшие внутренние доработки.
+
+v1.00 (21.06.2018):
+[!] Первая версия.
